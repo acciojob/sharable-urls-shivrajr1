@@ -13,8 +13,7 @@ button.addEventListener("click",()=>{
 	if(year.value!=''){arr.push(`year=${year.value}`)}
 	url.innerHTML=pre
 	for(let i=0;i<arr.length;i++){
-		if(i==0)url.innerHTML+="?"
-		if(i!=0)url.innerHTML+="&"
+		if(i==0){url.innerHTML+="?"}else{url.innerHTML+="&"}
 		url.innerHTML+=arr[i]
 	}
 })
