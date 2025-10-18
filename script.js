@@ -9,8 +9,10 @@ let button=document.getElementById('button')
 button.addEventListener("click",()=>{
 	url.innerHTML=''
 	let arr=[]
-	if(name.value.trim()!=''){arr.push(`name=${name.value}`)}
-	if(year.value!=''){arr.push(`year=${year.value}`)}
+	console.log(name.value=null)
+	console.log(year.value)
+	if(name.value.trim()!=''&&(name.value!=undefined&&name.value!=null)){arr.push(`name=${name.value}`)}
+	if(year.value!=''&&(year.value!=undefined&&year.value!=null)){arr.push(`year=${year.value}`)}
 	url.innerHTML=pre
 	for(let i=0;i<arr.length;i++){
 		if(i==0){url.innerHTML+="?"}else{url.innerHTML+="&"}
